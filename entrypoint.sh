@@ -12,7 +12,7 @@ run_update() {
 run_update
 
 # Setup cron job for every 10 minutes
-echo "*/10 * * * * cd /app && python /app/playlist_updater.py >> /app/output/cron.log 2>&1" | crontab -
+echo "*/10 * * * * cd /app && python playlist_updater.py >> /app/output/cron.log 2>&1" | crontab -
 
 # Start cron daemon in foreground
 echo "Starting cron scheduler..."
