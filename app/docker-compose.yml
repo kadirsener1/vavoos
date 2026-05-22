@@ -6,8 +6,8 @@ services:
     container_name: iptv-playlist-updater
     restart: unless-stopped
     volumes:
-      - ./output:/app/output
-      - ./repo:/repo
+      - ./output:app/output
+      - ./repo:repo
     environment:
       OUTPUT_DIR: /app/output
       PYTHONUNBUFFERED: 1
