@@ -18,7 +18,7 @@ PROXY_BASE = "https://vavooproxy.magnitude.workers.dev/resolve?url="
 
 CHANNELS = [
     {
-        "name": "beIN 1 HD",
+        "name": "beIN 1 HD sana",
         "group": "Spor",
         "logo": "https://raw.githubusercontent.com/kadirsener1/logolar/master/logos/bein1.png",
         "tvg_id": "beinsports1.tr",
@@ -113,7 +113,7 @@ CHANNELS = [
         ] 
     },
     {
-        "name": "beIN Sports 1 HD (yedek 2(",
+        "name": "beIN Sports 1 HD (yedek 2)",
         "group": "Spor",
         "logo": "https://raw.githubusercontent.com/kadirsener1/logolar/master/logos/showtv.png",
         "tvg_id": "showtv.tr",
@@ -122,7 +122,7 @@ CHANNELS = [
         ]
     },
         {
-        "name": "beIN Sports 1 HD (yedek 2(",
+        "name": "beIN Sports 1 HD (yedek 2)",
         "group": "Spor",
         "logo": "https://raw.githubusercontent.com/kadirsener1/logolar/master/logos/showtv.png",
         "tvg_id": "showtv.tr",
@@ -132,7 +132,7 @@ CHANNELS = [
         ]
     },
         {
-        "name": "beIN Sports 1 HD (yedek 2(",
+        "name": "beIN Sports 1 HD (yedek 2)",
         "group": "Spor",
         "logo": "https://raw.githubusercontent.com/kadirsener1/logolar/master/logos/showtv.png",
         "tvg_id": "showtv.tr",
@@ -146,9 +146,7 @@ CHANNELS = [
         "logo": "https://raw.githubusercontent.com/kadirsener1/logolar/master/logos/cnnturk.png",
         "tvg_id": "cnnturk.tr",
         "urls": [
-            "https://vavoo.to/vavoo-iptv/play/CNN_ID_1",
-            "https://vavoo.to/vavoo-iptv/play/CNN_ID_2",
-            "https://vavoo.to/vavoo-iptv/play/CNN_ID_3"
+            "https://vavoo.to/vavoo-iptv/play/2056768647bd7eb3f3cf70"
         ]
     },
 ]
