@@ -7,7 +7,7 @@ fi
 cd /repo 2>/dev/null || exit 0
 
 # Copy latest playlist
-cp /app/output/playlist.m3u . 2>/dev/null || true
+cp app/output/playlist.m3u . 2>/dev/null || true
 
 # Configure git
 git config --global user.email "bot@docker.local" 2>/dev/null
@@ -27,7 +27,7 @@ git commit -m "Auto-update: $TIMESTAMP" 2>/dev/null || exit 0
 
 # Push with token
 echo "[$(date '+%H:%M:%S')] Attempting push to GitHub..."
-git push -u "https://${GIT_TOKEN}@github.com/kadirsener1/vavoos.git" HEAD:main 2>&1 | tee -a /app/output/cron.log
+git push -u "https://${GIT_TOKEN}@github.com/kadirsener1/vavoos.git" HEAD:main 2>&1 | tee -a app/output/cron.log
 
 if [ ${PIPESTATUS[0]} -eq 0 ]; then
   echo "[$(date '+%H:%M:%S')] Push successful!"
