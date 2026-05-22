@@ -4,7 +4,7 @@ set -e
 # Function to run the updater
 run_update() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting playlist update..."
-    python /app/playlist_updater.py
+    python playlist_updater.py
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] Update completed."
 }
 
