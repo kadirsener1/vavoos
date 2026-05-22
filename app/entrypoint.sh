@@ -25,13 +25,13 @@ fi
 # Function to run the updater and push
 run_update_and_push() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting playlist update..."
-    /usr/local/bin/python3 /app/playlist_updater.py
+    /usr/local/bin/python3 app/playlist_updater.py
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] Update completed."
     
     # Push to GitHub if token is set
     if [ -n "$GIT_TOKEN" ]; then
         cd /repo
-        cp /app/output/playlist.m3u . 2>/dev/null || true
+        cp app/output/playlist.m3u . 2>/dev/null || true
         git add playlist.m3u 2>/dev/null || true
         
         if git diff --cached --quiet; then
