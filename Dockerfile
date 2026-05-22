@@ -20,6 +20,10 @@ RUN chmod +x /app/entrypoint.sh
 # Create output directory
 RUN mkdir -p /app/output
 
+# Create crontab file directly in /etc/cron.d (cron reads this automatically)
+RUN echo "*/10 * * * * root cd /app && /usr/local/bin/python3 /app/playlist_updater.py >> /app/output/cron.log 2>&1" > /etc/cron.d/playlist-updater && \
+    chmod 0644 /etc/cron.d/playlist-updater
+
 # Set environment
 ENV PYTHONUNBUFFERED=1
 

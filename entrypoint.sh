@@ -4,16 +4,13 @@ set -e
 # Function to run the updater
 run_update() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting playlist update..."
-    python playlist_updater.py
+    /usr/local/bin/python3 /app/playlist_updater.py
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] Update completed."
 }
 
 # Run immediately on startup
 run_update
 
-# Setup cron job for every 10 minutes
-echo "*/10 * * * * cd /app && python playlist_updater.py >> /app/output/cron.log 2>&1" | crontab -
-
 # Start cron daemon in foreground
-echo "Starting cron scheduler..."
-exec cron -f
+echo "Cron scheduler started (updates every 10 minutes)..."
+exec /usr/sbin/cron -f -l 2
