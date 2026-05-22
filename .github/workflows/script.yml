@@ -1,0 +1,26 @@
+name: 30 Dakikada Bir Calisan Python Gorevi
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Depoyu klonla
+        uses: actions/checkout@v4
+
+      - name: Python kurulumu
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10' # Kullandığınız Python sürümünü yazın
+
+      # Eğer gereksinimleriniz varsa pip install komutlarını buraya ekleyebilirsiniz
+      # - name: Gerekli kütüphaneleri kur
+      #   run: pip install -r requirements.txt
+
+      - name: Python dosyasını çalıştır
+        run: python ./dplaylist_updater.py
