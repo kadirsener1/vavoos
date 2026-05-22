@@ -7,7 +7,7 @@ fi
 cd /repo 2>/dev/null || exit 0
 
 # Copy latest playlist
-cp /app/output/playlist.m3u . 2>/dev/null || true
+cp app/output/playlist.m3u . 2>/dev/null || true
 
 # Configure git
 git config --global user.email "bot@docker.local" 2>/dev/null
