@@ -40,7 +40,7 @@ jobs:
 
       - name: playlist_updater.py çalıştır
         run: |
-          python -u app/playlist_updater.py
+          python -u playlist_updater.py
 
       - name: Git durumu
         run: git status
