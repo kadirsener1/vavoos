@@ -1,0 +1,22 @@
+name: 30 Dakikada Bir Calisan Gorev
+
+on:
+  schedule:
+    # cron sözdizimi: her 30 dakikada bir çalıştırır
+    - cron: '*/30 * * * *'
+  workflow_dispatch: # Bu satır, işlemi GitHub arayüzünden manuel olarak da tetikleyebilmenizi sağlar
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Depodaki dosyaları çalışma ortamına çeker
+      - name: Depoyu klonla
+        uses: actions/checkout@v4
+
+      # 2. Dosyayı çalıştırır
+      - name: Dosyayı çalıştır
+        run: |
+          chmod +x ./entrypoint.sh
+          ./entrypoint.sh
