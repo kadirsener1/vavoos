@@ -1,0 +1,7 @@
+output/
+.git
+.gitignore
+README.md
+*.log
+__pycache__
+.DS_Store
