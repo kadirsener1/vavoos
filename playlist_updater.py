@@ -7,7 +7,7 @@ import os
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-OUTPUT_DIR = os.getenv("OUTPUT_DIR", "/app/output")
+OUTPUT_DIR = os.getenv("OUTPUT_DIR", "/output")
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "playlist.m3u")
 PROXY_BASE = "https://vavooproxy.magnitude.workers.dev/resolve?url="
 
