@@ -1,8 +1,8 @@
-name: 20 dk up
+name: 59 dk up
 
 on:
   schedule:
-    - cron: "*/20 * * * *"
+    - cron: "*/59 * * * *"
   workflow_dispatch:
 
 permissions:
